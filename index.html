@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+<meta charset="utf-8">
+<title>demo</title>
+<link rel="stylesheet" href="http://cdn.bootcss.com/fullPage.js/2.8.2/jquery.fullPage.min.css">
+<style>
+* { margin: 0; padding: 0;font-family: '微软雅黑', '宋体'; color: #fff;}
+ul { list-style-type: none;}
+.top { position: fixed; left: 0; right: 0; top: 0; z-index: 999; height: 50px; background-color: rgba(0, 0, 0, 0.6);}
+.menu { width: 1000px; margin: 0 auto; overflow: hidden;}
+.logo { float: left; margin-top: 9px;}
+.logo a { display: inline-block; width: 32px; height: 32px; background-image: url(images/logo_2x.png); background-size: 32px 32px;}
+.nav { float: right; margin-top: 10px; font-size: 0;}
+.nav li { display: inline-block; margin-left: 40px;}
+.nav a { display: inline-block; height: 30px; line-height: 30px; font-size: 12px; color: #fff; text-decoration: none;}
+.nav a:hover { color: #83c3f3;}
+.section { text-align: center; background-repeat: no-repeat; background-position: 50% 50%; background-size: cover; overflow: hidden;}
+#section0 { background:url(images/face.png) no-repeat ;
+background-size: 100%;
+}
+#section0 { background:#E79D34;}
+#section1 { background:#69BC50}
+#section2 { background:#3CA0DC}
+#section3 { background:#222222}
+.title0_1 {
+    opacity: 0.8;
+    font-size: 16px;
+    height: 60px;
+    line-height: 60px;
+    border-bottom: 2px solid #ddd;
+    width: 750px;
+    margin: 0 auto;
+    margin-top: 50px;
+    overflow: hidden;
+    -webkit-animation: title1X 2s linear 0s ;
+    animation: title1X 2s linear 0s ;
+    
+ }
+.title0_2 { 
+	font-size: 20px;
+	line-height: 75px;
+	-webkit-animation: title2X 2s linear 0s ;
+    animation: title2X 2s linear 0s ;
+ }
+.title0_3 { 
+	font-size: 18px; 
+	line-height: 48px;
+	margin-top: 20px;
+	-webkit-animation: title3X 2.5s linear 0s ;
+    animation: title3X 2.5s linear 0s ;
+}
+.title0_4 { 
+	font-size: 18px; 
+	line-height: 48px;
+	margin-top: 20px;
+	-webkit-animation: title4X 3.0s linear 0s ;
+    animation: title4X 3.0s linear 0s ; 
+}
+#section1 .title1, #section1 .title2, #section2 .title1, #section2 .title2 { color: #fff; opacity: 1;}
+#section1 .title3, #section2 .title3 { color: #fff;}
+#section3 .title3 { color: #000;}
+#section1 .title1 { background: url(images/titleline2.png) no-repeat center bottom;}
+#section2 .title1 { background: url(images/titleline3.png) no-repeat center bottom;}
+#section3 .title1 { background: url(images/titleline4.png) no-repeat center bottom;}
+.mTxt1 { width: 526px; height: 195px; margin: 0 auto; position: relative; top: 25%; background: url(images/oneTxt.png) no-repeat 0 0;}
+.DownloadBtn { cursor: pointer; margin: 85px auto 0; width: 220px; height: 50px; position: relative; background: #5396FF; color: #fff; line-height: 50px; font-size: 24px; border-radius: 25px;}
+.DownloadBtn a { display: inline-block; width: 100%; height: 100%; color: #fff; font-family: 'PingFang-SC-UltraLight', '微软雅黑', '宋体';}
+.mTxt1 { width: 526px; height: 195px; margin: 0 auto; position: relative; top: 25%; background: url(images/oneTxt.png) no-repeat 0 0;}
+.DownloadBtn { cursor: pointer; margin: 85px auto 0; width: 220px; height: 50px; position: relative; background: #5396FF; color: #fff; line-height: 50px; font-size: 24px; border-radius: 25px;}
+.DownloadBtn a { display: inline-block; width: 100%; height: 100%; color: #fff; font-family: 'PingFang-SC-UltraLight', '微软雅黑', '宋体'; text-decoration: none;}
+#fp-nav ul li a span, .fp-slidesNav ul li a span { background-color: #fff;}
+
+/*头像*/
+.face{
+	width: 100px;
+	height: 100px;
+	border-radius: 50px;
+    -webkit-animation: pointRadius 1s linear 0s ;
+    animation: pointRadius 1s linear 0s ;
+}
+.panel_pace{
+	border: 4px solid #fff;
+    padding: 3px;
+    width: 100px;
+    height: 100px;
+    border-radius: 60px;
+	margin: 0 auto;
+	-webkit-animation: circleRadius 1s linear 0s ;
+    animation: circleRadius 1s linear 0s ;
+}
+
+/* 动画*/
+
+/*头像外边框*/
+@keyframes circleRadius{
+	0% {
+    	width: 10px;
+		height: 10px;
+	}
+	80% {
+    	width: 80px;
+		height: 80px;
+		border-radius: 45px;
+	}
+    100% {
+    	width: 100px;
+		height: 100px;
+		border-radius: 60px;
+	}
+}
+/*头像*/
+ @keyframes pointRadius {
+    0% {
+    	width: 10px;
+		height: 10px;
+		border-radius: 0px;
+	}
+	80% {
+    	width: 80px;
+		height: 80px;
+		border-radius: 40px;
+	}
+    100% {
+    	width: 100px;
+		height: 100px;
+		border-radius: 50px;
+	}
+}
+
+/*title1*/
+@keyframes title1X {
+    0% {
+    	opacity: 0;
+	}
+	50% {
+    	opacity: 0;
+	}
+    100% {
+    	opacity: 0.8;
+	}
+}
+@keyframes title2X {
+    0%{
+		transform: translateY(40px);	
+		opacity: 0;
+	}
+	50%{
+		transform: translateY(40px);	
+		opacity: 0;
+	}
+	100%{
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+@keyframes title3X {
+     0%{
+		transform: translateY(40px);	
+		opacity: 0;
+	}
+	60%{
+		transform: translateY(40px);	
+		opacity: 0;
+	}
+	100%{
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+@keyframes title4X {
+    0%{
+		transform: translateY(40px);	
+		opacity: 0;
+	}
+	70%{
+		transform: translateY(40px);	
+		opacity: 0;
+	}
+	100%{
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+</style>
+<script src="http://cdn.bootcss.com/jquery/1.8.3/jquery.min.js"></script>
+<script src="http://cdn.bootcss.com/fullPage.js/2.8.2/jquery.fullPage.min.js"></script>
+<script>
+$(function() {
+$('#fullpage').fullpage({
+	navigation: true
+});
+});
+</script>
+</head>
+
+<body>
+<!--<div class="top">
+	<div class="menu">
+		<h1 class="logo"><a href="http://www.dowebok.com/"></a></h1>
+		<ul class="nav">
+			<li><a href="javascript:">拼音输入法</a></li>
+			<li><a href="javascript:">五笔输入法</a></li>
+			<li><a href="javascript:">皮肤编辑器</a></li>
+			<li><a href="javascript:">皮肤Store</a></li>
+			<li><a href="javascript:">论坛</a></li>
+			<li><a href="javascript:">微博</a></li>
+		</ul>
+	</div>
+</div>-->
+<div id="fullpage">
+	<div class="section" id="section0">
+		<div class="panel_pace">
+			<img class="face" src="images/face.png" />
+		</div>
+		
+		<div class="title0_1">眼泪是最珍贵的东西，只能留给这种深切的悲伤，这悲伤与羞辱无关，与委屈无关，与疼痛无关。</div>
+		<div class="title0_2">I am li</div>
+		<div class="title0_3">23 years old</div>
+		<div class="title0_4">A front-end programmer</div>
+	</div>
+	<div class="section" id="section1">
+		<div class="title1_1">待开发</div>
+		
+	</div>
+	<div class="section" id="section2">
+		<div class="title2_1">待开发</div>
+	</div>
+	<div class="section" id="section3">
+		<div class="title3_1">待开发</div>
+	</div>
+</div>
+
+<!-- 统计 -->
+<script>var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F988268596e7a833ffbfb2e9f82d93e18' type='text/javascript'%3E%3C/script%3E"));
+var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan  style='display:none'id='cnzz_stat_icon_1253231826'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s5.cnzz.com/stat.php%3Fid%3D1253231826' type='text/javascript'%3E%3C/script%3E"));
+</script>
+</body>
+
+</html>
