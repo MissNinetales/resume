@@ -8,22 +8,43 @@
 <style>
 * { margin: 0; padding: 0;font-family: '微软雅黑', '宋体'; color: #fff;}
 ul { list-style-type: none;}
-.top { position: fixed; left: 0; right: 0; top: 0; z-index: 999; height: 50px; background-color: rgba(0, 0, 0, 0.6);}
-.menu { width: 1000px; margin: 0 auto; overflow: hidden;}
-.logo { float: left; margin-top: 9px;}
-.logo a { display: inline-block; width: 32px; height: 32px; background-image: url(images/logo_2x.png); background-size: 32px 32px;}
-.nav { float: right; margin-top: 10px; font-size: 0;}
-.nav li { display: inline-block; margin-left: 40px;}
-.nav a { display: inline-block; height: 30px; line-height: 30px; font-size: 12px; color: #fff; text-decoration: none;}
-.nav a:hover { color: #83c3f3;}
+.blue{
+	background: #7BC8E6;
+}
+.blue:before{
+	border-bottom:13px solid #7BC8E6;
+}
+.blue:after{
+	border-top:13px solid #7BC8E6;
+}
+.orange{
+	background-color: #F4C546;
+}
+.orange:before{
+	border-bottom:13px solid #F4C546;
+}
+.orange:after{
+	border-top:13px solid #F4C546;
+}
+.green{
+	background-color: #7FB96F;
+}
+.green:before{
+	border-bottom:13px solid #7FB96F;
+}
+.green:after{
+	border-top:13px solid #7FB96F;
+}
 .section { text-align: center; background-repeat: no-repeat; background-position: 50% 50%; background-size: cover; overflow: hidden;}
 #section0 { background:url(images/face.png) no-repeat ;
 background-size: 100%;
 }
 #section0 { background:#E79D34;}
 #section1 { background:#69BC50}
-#section2 { background:#3CA0DC}
-#section3 { background:#222222}
+#section2 { background:#ED6461}
+#section3 { background:#6A3589}
+#section4 { background:#3CA0DC}
+#section5 { background:#222222}
 .title0_1 {
     opacity: 0.8;
     font-size: 16px;
@@ -58,18 +79,6 @@ background-size: 100%;
 	-webkit-animation: title4X 3.0s linear 0s ;
     animation: title4X 3.0s linear 0s ; 
 }
-#section1 .title1, #section1 .title2, #section2 .title1, #section2 .title2 { color: #fff; opacity: 1;}
-#section1 .title3, #section2 .title3 { color: #fff;}
-#section3 .title3 { color: #000;}
-#section1 .title1 { background: url(images/titleline2.png) no-repeat center bottom;}
-#section2 .title1 { background: url(images/titleline3.png) no-repeat center bottom;}
-#section3 .title1 { background: url(images/titleline4.png) no-repeat center bottom;}
-.mTxt1 { width: 526px; height: 195px; margin: 0 auto; position: relative; top: 25%; background: url(images/oneTxt.png) no-repeat 0 0;}
-.DownloadBtn { cursor: pointer; margin: 85px auto 0; width: 220px; height: 50px; position: relative; background: #5396FF; color: #fff; line-height: 50px; font-size: 24px; border-radius: 25px;}
-.DownloadBtn a { display: inline-block; width: 100%; height: 100%; color: #fff; font-family: 'PingFang-SC-UltraLight', '微软雅黑', '宋体';}
-.mTxt1 { width: 526px; height: 195px; margin: 0 auto; position: relative; top: 25%; background: url(images/oneTxt.png) no-repeat 0 0;}
-.DownloadBtn { cursor: pointer; margin: 85px auto 0; width: 220px; height: 50px; position: relative; background: #5396FF; color: #fff; line-height: 50px; font-size: 24px; border-radius: 25px;}
-.DownloadBtn a { display: inline-block; width: 100%; height: 100%; color: #fff; font-family: 'PingFang-SC-UltraLight', '微软雅黑', '宋体'; text-decoration: none;}
 #fp-nav ul li a span, .fp-slidesNav ul li a span { background-color: #fff;}
 
 /*头像*/
@@ -91,6 +100,88 @@ background-size: 100%;
     animation: circleRadius 1s linear 0s ;
 }
 
+
+.title1_1,.title2_1,.title3_1,.title4_1{
+    position: absolute;
+    top: 20%;
+    right: 35%;
+    font-size: 35px;
+    font-weight: bolder;
+    letter-spacing: 15px;
+    width: 30%;
+}
+
+.introduce{
+	margin: 0 auto;
+}
+.introduce td{
+	text-align: left;
+}
+.introduce-world {
+}
+
+.introduce-world p{
+	line-height: 50px;
+}
+.experience{
+	display: -webkit-box; /* 老版本语法: Safari, iOS, Android browser, older WebKit browsers. */
+    display: -moz-box; /* 老版本语法: Firefox (buggy) */
+    display: -ms-flexbox; /* 混合版本语法: IE 10 */
+    display: -webkit-flex; /* 新版本语法: Chrome 21+ */
+    display: flex; /* 新版本语法: Opera 12.1, Firefox 22+ */
+    -webkit-box-pack: justify;
+    -moz-justify-content: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    color: #666;
+    font-size: 1.3rem;
+    width: 80%;
+    margin: 0 auto;
+}
+.ex-panel{
+	width: 33%;
+	border-top: 10px solid #fff;
+}
+
+.hexagon { 
+	width: 50px; 
+	height: 30px; 
+	position: relative; 
+	left: 45%;
+	top: -20px;
+	margin-bottom: 20px;
+} 
+.hexagon:before { 
+	content: ""; 
+	position: absolute; 
+	top: -13px; 
+	left: 0; 
+	width: 0; 
+	height: 0; 
+	border-left: 25px solid transparent; 
+	border-right: 25px solid transparent; 
+} 
+.hexagon:after { 
+	content: ""; 
+	position: absolute; 
+	bottom: -13px; 
+	left: 0; 
+	width: 0; 
+	height: 0; 
+	border-left: 25px solid transparent; 
+	border-right: 25px solid transparent; 
+	
+}
+
+.ex-1{
+	border-top: 10px solid #7BC8E6;
+}
+.ex-2{
+	border-top: 10px solid #7FB96F;
+}
+.ex-3{
+	border-top: 10px solid #F4C546;
+}
 /* 动画*/
 
 /*头像外边框*/
@@ -188,55 +279,92 @@ background-size: 100%;
 <script src="http://cdn.bootcss.com/fullPage.js/2.8.2/jquery.fullPage.min.js"></script>
 <script>
 $(function() {
-$('#fullpage').fullpage({
-	navigation: true
-});
+	$('#fullpage').fullpage({
+		navigation: true
+	});
 });
 </script>
 </head>
 
 <body>
-<!--<div class="top">
-	<div class="menu">
-		<h1 class="logo"><a href="http://www.dowebok.com/"></a></h1>
-		<ul class="nav">
-			<li><a href="javascript:">拼音输入法</a></li>
-			<li><a href="javascript:">五笔输入法</a></li>
-			<li><a href="javascript:">皮肤编辑器</a></li>
-			<li><a href="javascript:">皮肤Store</a></li>
-			<li><a href="javascript:">论坛</a></li>
-			<li><a href="javascript:">微博</a></li>
-		</ul>
-	</div>
-</div>-->
 <div id="fullpage">
 	<div class="section" id="section0">
 		<div class="panel_pace">
 			<img class="face" src="images/face.png" />
 		</div>
-		
 		<div class="title0_1">眼泪是最珍贵的东西，只能留给这种深切的悲伤，这悲伤与羞辱无关，与委屈无关，与疼痛无关。</div>
 		<div class="title0_2">I am li</div>
 		<div class="title0_3">23 years old</div>
 		<div class="title0_4">A front-end programmer</div>
 	</div>
 	<div class="section" id="section1">
-		<div class="title1_1">待开发</div>
+		<div class="title1_1">个人简介</div>
 		
+		<table class="introduce">
+			<tr> 
+				<td>姓名：</td>
+				<td>徐丽</td>
+			</tr>
+			<tr> 
+				<td>T E L：</td>
+				<td>15927012341</td>
+			</tr>
+			<tr> 
+				<td>E-mail：</td>
+				<td>1030637659@qq.com</td>
+			</tr>
+			<tr> 
+				<td>籍贯：</td>
+				<td>湖北 · 荆州</td>
+			</tr>
+			
+		</table>
+		<section class="introduce-world">
+			<p>我是一个性格幽默、做事认真的人。
+			<p>我喜欢研究所碰到的各种技术，不给自己设边界，有 Geek 精神。
+			<p>我有时间概念，能在约定时间内保证完成任务。
+			<p>半年前端开发经验，熟悉 HTML、CSS、Javascript，能熟练开发符合 W3C 标准的页面，熟练使用 jQuery 框架，曾经开发过 jQuery 插件。
+			<p>有良好的编码习惯。
+			<p>有 Linux 基础，对服务器端开发有一定了解，能够配合程序员完成相关工作。
+			<p>熟悉 PHP+MySQL；理解基本的算法分析与数据结构，以及面向对象的设计模式。
+		</section>
 	</div>
 	<div class="section" id="section2">
-		<div class="title2_1">待开发</div>
+		<div class="title2_1">工作经历</div>
+		<div class="experience">
+			<div class="ex-panel ex-1">
+				<div class="hexagon blue">A</div>
+				<p>2015.03 - 2016.03</p>
+				<p>上海享泰信息技术有限公司</p>
+			</div>
+			<div class="ex-panel ex-2 ">
+				<div class="hexagon green">B</div>
+				<p>2016.03 - 2017.03</p>
+				<p>恒信汽车电子商务有限公司</p>
+			</div>
+			<div class="ex-panel ex-3 ">
+				<div class="hexagon orange">C</div>
+				<p>2017.03 - ？</p>
+				<p>？？？</p>
+			</div>
+		</div>
 	</div>
 	<div class="section" id="section3">
-		<div class="title3_1">待开发</div>
+		<div class="title3_1">专业技能</div>
+		
+		
+		
+	</div>
+	<div class="section" id="section4">
+		<div class="title4_1">项目经验</div>
+	</div>
+	<div class="section" id="section5">
+		<div class="title5_1">最后...</div>
+		<div class="title5_2">联系我吧：1030637659@qq.com</div>
+		<div class="title5_3">下载world版简历</div>
 	</div>
 </div>
 
-<!-- 统计 -->
-<script>var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
-document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F988268596e7a833ffbfb2e9f82d93e18' type='text/javascript'%3E%3C/script%3E"));
-var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan  style='display:none'id='cnzz_stat_icon_1253231826'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s5.cnzz.com/stat.php%3Fid%3D1253231826' type='text/javascript'%3E%3C/script%3E"));
-</script>
 </body>
 
 </html>
